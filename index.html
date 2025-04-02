@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ПДА</title>
+    <style>
+        body {
+            background-color: #2b2b2b;
+            color: #d4af37;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            padding: 20px;
+            background-image: url('https://raw.githubusercontent.com/YOUR_GITHUB_USER/YOUR_REPO/main/pda_bg.jpg');
+            background-size: cover;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            border: 2px solid #d4af37;
+            padding: 20px;
+            background-color: rgba(20, 20, 20, 0.9);
+            box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.5);
+        }
+        video {
+            width: 100%;
+            height: auto;
+            border: none;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #d4af37;
+            color: #2b2b2b;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .notes, .profile, .rank, .gallery {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #d4af37;
+            background-color: rgba(40, 40, 40, 0.9);
+            text-align: left;
+        }
+        .profile img {
+            width: 150px;
+            height: auto;
+            border: 2px solid #d4af37;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        function showSection(section) {
+            document.querySelector('.notes').style.display = 'none';
+            document.querySelector('.profile').style.display = 'none';
+            document.querySelector('.rank').style.display = 'none';
+            document.querySelector('.gallery').style.display = 'none';
+            document.querySelector('.' + section).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Личный ПДА</h1>
+        <div class="buttons">
+            <button class="button" onclick="showSection('profile')">Профиль</button>
+            <button class="button" onclick="showSection('rank')">Ранг</button>
+            <button class="button" onclick="showSection('notes')">Последние заметки</button>
+            <button class="button" onclick="showSection('gallery')">Запись ПДА - Галерея</button>
+        </div>
+        
+        <div class="profile">
+            <h2>Профиль</h2>
+            <img src="https://sun9-14.userapi.com/impf/c637416/v637416230/5a37b/TjtwRoXuVL4.jpg?size=558x488&quality=96&sign=687defa1ee5d0e8499c2b888fed35beb&type=album" alt="Фото Буратино">
+            <p>Имя: Буратино</p>
+            <p>Группировка: Одиночка</p>
+            <p>Опыт: Опытный</p>
+            <p>Прибыл в Зону: До 2013</p>
+            <p>Особые приметы: Носит старый противогаз, говорит мало</p>
+            <p>Характер: Закрытый, не доверяет новым людям, но за друзей стоит горой.</p>
+            <p>История: Говорят, раньше был сталкером-доставщиком артефактов, но после неудачного рейда на Рыжий Лес сменил род деятельности.</p>
+            <p>Оружие: АКС-74У с самодельным прикладом, нож "Стрела".</p>
+            <p>Любимое место: Бар "100 рентген"</p>
+        </div>
+        
+        <div class="rank">
+            <h2>Ранг</h2>
+            <p>Прибыл в Зону: До 2013</p>
+            <p>Убито людей: 23</p>
+            <p>Убито мутантов: 74</p>
+            <p>Найдено артефактов: 16</p>
+            <p>Время в Зоне: более 10 лет</p>
+        </div>
+        
+        <div class="notes">
+            <h2>Последние заметки</h2>
+            <p><strong>День 1:</strong> Только добрался до Бара, встретил Черного. Говорит, есть дело – надо сопровождать караван с хабаром. Думаю, соглашусь.</p>
+            <p><strong>День 2:</strong> Рейд начался. В болотах видели какие-то движения, но обошлось. Лагерь разбит, ночь прошла спокойно.</p>
+            <p><strong>День 3:</strong> На точке передачи встретили Пояса. Требует свою долю. Черный молчит, но я вижу, что ему это не нравится.</p>
+            <p><strong>День 4:</strong> Разговор с Черным. Он дал понять, что Пояс слишком мешает делу. Если тот продолжит, придется его устранить.</p>
+            <p><strong>День 5:</strong> Пояс надо устранить, так как он сильно мешает бизнесу с Черным. Чем быстрее, тем лучше.</p>
+        </div>
+
+        <div class="gallery">
+            <h2>Запись ПДА - Галерея</h2>
+            <video controls>
+                <source src="https://raw.githubusercontent.com/YOUR_GITHUB_USER/YOUR_REPO/main/pda_record.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
+    </div>
+</body>
+</html>
